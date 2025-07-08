@@ -7,7 +7,6 @@ module full_add_behavioral (
 );
 
     always @(*) begin
-        // Behavioral logic using high-level description
         sum = a ^ b ^ carry_in;
         carry_out = (a & b) | (carry_in & (a ^ b));
     end
