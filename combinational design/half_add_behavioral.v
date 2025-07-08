@@ -1,5 +1,5 @@
 module half_add_behavioural(
-       input a,
+           input a,
 	   input b,
 	   
 	   output reg sum,
@@ -7,6 +7,6 @@ module half_add_behavioural(
 	   
 	   always@(*) begin
 	      sum = a^b;
-		  carry = a&b;
-		end	   
+	      carry = a&b;
+	   end	   
 endmodule
