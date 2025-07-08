@@ -1,5 +1,5 @@
 module full_add_structural (
-       input a,
+           input a,
 	   input b,
 	   input carry_in,
 	   output sum,
