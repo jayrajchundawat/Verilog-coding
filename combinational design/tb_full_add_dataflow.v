@@ -1,19 +1,19 @@
 module tb_full_add_dataflow();
-       reg  a;
+           reg  a;
 	   reg b;
 	   reg carry_in;
 	   wire sum;
 	   wire carry;
 	   
 	   full_add_dataflow FULL_ADD2 (
-	       .a(a),
+	           .a(a),
 		   .b(b),
 		   .carry_in(carry_in),
 		   .sum(sum),
 		   .carry(carry)
 		   );
 		   
-	   initial begin
+       initial begin
          $monitor("a=%b, b=%b, carry_in=%0b, sum=%b, carry =%b", a, b, carry_in, sum, carry);
        end  
   
