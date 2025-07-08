@@ -1,5 +1,5 @@
 module half_add_dataflow(
-       input a,
+           input a,
 	   input b,
 	   output sum,
 	   output carry);
