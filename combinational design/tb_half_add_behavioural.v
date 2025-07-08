@@ -1,4 +1,4 @@
-`timescale 1us/1ns
+`timescale 1ns/1ps
 module tb_half_add_behavioural(
                );
 	reg a;
@@ -7,7 +7,7 @@ module tb_half_add_behavioural(
 	wire carry;
 	
 	half_add_structural HALF_ADD1(
-	      .a(a),
+	          .a(a),
 		  .b(b),
 		  .sum(sum),
 		  .carry(carry)
