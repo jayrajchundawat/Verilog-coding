@@ -1,6 +1,6 @@
 `timescale 1ns/100ps
 module tb_MUX_4x_nbit ();
-      parameter BUS_WIDTH = 8;
+          parameter BUS_WIDTH = 8;
 	  reg [BUS_WIDTH-1:0] a;
 	  reg [BUS_WIDTH-1:0] b;
 	  reg [BUS_WIDTH-1:0] c;
@@ -12,7 +12,7 @@ module tb_MUX_4x_nbit ();
 	  #(.N(BUS_WIDTH))
 	   MUX1 
 	    (
-	      .a(a),
+	          .a(a),
 		  .b(b),
 		  .c(c),
 		  .d(d),
@@ -20,7 +20,7 @@ module tb_MUX_4x_nbit ();
 		  .y(y)
 		  );
 	  initial begin 
-	    $monitor ("a=%b,b=%b,c=%b,d=%b,sel=%b,y=%b",a,b,c,d,sel,y);
+	         $monitor ("a=%b,b=%b,c=%b,d=%b,sel=%b,y=%b",a,b,c,d,sel,y);
 		 a = 0; b=0; c=0; d=0; sel=0;
 		 #1; a = 8'b00110011; b = 8'b00000000; c = 8'b00011100; d = 8'b11111111; sel = 0;
 		 #1; a = 8'b00110011; b = 8'b00000000; c = 8'b00011100; d = 8'b11111111; sel = 1;
