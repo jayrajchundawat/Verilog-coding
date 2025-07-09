@@ -16,8 +16,8 @@ module MUX_4x_nbit
 	   2'd2 : y = c;
 	   2'd3 : y = d;
 	   default : y = a;
-	  endcase
-	end
+	endcase
+    end
 endmodule
 	   
    
