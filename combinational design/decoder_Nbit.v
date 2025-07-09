@@ -1,7 +1,7 @@
 module decoder_Nbit 
-     #(parameter N=3)
-	 (
-	  input [N-1:0]a,
+ #(parameter N=3)
+     (
+      input [N-1:0]a,
       input enable,
       output reg [2**N-1:0]y
      );
