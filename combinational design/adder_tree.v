@@ -1,5 +1,5 @@
 module adder_tree (
-       input [3:0] a,
+           input [3:0] a,
 	   input [3:0] b,
 	   input [7:0] c,
 	   input [7:0] d,
