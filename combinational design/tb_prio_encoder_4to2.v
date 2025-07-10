@@ -1,6 +1,6 @@
 `timescale 1ns/100ps
 module tb_prio_encoder_4to2 ();
-         reg [3:0]d;
+                 reg [3:0]d;
 		 wire [1:0] q;
 		 wire v;
 		 
