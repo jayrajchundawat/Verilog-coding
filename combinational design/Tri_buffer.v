@@ -1,5 +1,5 @@
 module Tri_buffer (
-      input a,
+          input a,
 	  input x,
 	  output y
 	  );
