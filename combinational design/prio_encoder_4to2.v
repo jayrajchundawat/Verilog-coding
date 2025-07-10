@@ -1,5 +1,5 @@
 module prio_encoder_4to2 (
-        input [3:0]d,
+                input [3:0]d,
 		output reg v,
 		output reg [1:0] q
 		);
