@@ -8,7 +8,7 @@ module tb_Hex_7seg_decoder();
 	 integer i;
 	 
 	 Hex_7seg_decoder  DEC7 (
-	         .in(in),
+	                 .in(in),
 			 .a(a),
 			 .b(b),
 			 .c(c),
@@ -24,7 +24,7 @@ module tb_Hex_7seg_decoder();
 	   #1; in =0;
 	   for (i=0; i<16; i=i+1) begin
 	        #1;    in = i;
-       end
+           end
 	 end
 endmodule
 			
