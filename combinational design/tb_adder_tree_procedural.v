@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 module tb_adder_tree_procedural();
-       reg [3:0] a;
+           reg [3:0] a;
 	   reg [3:0] b;
 	   reg [7:0] c;
 	   reg [7:0] d;
@@ -9,7 +9,7 @@ module tb_adder_tree_procedural();
 	   wire [9:0] sum3;
 	   
 	   adder_tree_procedural ADD_TREE_PROCD (
-	        .a(a),
+	                .a(a),
 			.b(b),
 			.c(c),
 			.d(d),
