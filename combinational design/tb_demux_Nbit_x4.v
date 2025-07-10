@@ -2,8 +2,8 @@
 module tb_demux_Nbit_x4 ();
     
 	parameter BUS_width = 8;
-    reg [BUS_width-1:0] y;
-    reg [1:0] sel;
+        reg [BUS_width-1:0] y;
+        reg [1:0] sel;
 	wire [BUS_width-1:0]a;
 	wire [BUS_width-1:0]b;
 	wire [BUS_width-1:0]c;
@@ -12,7 +12,7 @@ module tb_demux_Nbit_x4 ();
 	demux_Nbit_x4  
 	#(.N(BUS_width))
 	DEMUXn (
-	         .y(y),
+	                 .y(y),
 			 .sel(sel),
 			 .a(a),
 			 .b(b),
