@@ -1,5 +1,5 @@
 module comparator (
-      input a,
+          input a,
 	  input b,
 	  output smaller,
 	  output equal,
