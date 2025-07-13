@@ -1,0 +1,6 @@
+read_verilog "/mnt/d/Verilog project - 4bit_adder/adder_ff.v"
+hierarchy -top adder_ff
+proc; flatten; opt; fsm; opt; techmap; opt
+
+# Remove attributes and skip all annotations
+write_verilog -noattr adder_ff_synth.v
