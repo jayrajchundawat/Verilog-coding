@@ -3,14 +3,14 @@
 module adder_tb;
 
     // Testbench signals
-    reg clk;
+    reg ck;
     reg rst_n;
     reg [3:0] a, b;
     wire [4:0] sum;
 
     // Instantiate the design under test (DUT)
     adder_ff uut (
-        .clk(clk),
+        .ck(ck),
         .rst_n(rst_n),
         .a(a),
         .b(b),
@@ -23,7 +23,7 @@ module adder_tb;
     // Test sequence
     initial begin
         // Initialize signals
-        clk = 0;
+        ck = 0;
         rst_n = 0;
         a = 0;
         b = 0;
