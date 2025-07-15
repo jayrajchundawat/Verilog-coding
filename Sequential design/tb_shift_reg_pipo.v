@@ -1,16 +1,16 @@
 `timescale 1us/1ns
 module tb_shift_reg_pipo();
 	
-    reg [3:0] d;
+        reg [3:0] d;
 	reg clk = 0;
 	reg reset_n;
 	wire [3:0] q;
-    integer i;
+       integer i;
 	
     shift_reg_pipo PIPO0(
 	    .reset_n(reset_n),
 	    .clk    (clk    ),
-        .d      (d      ),
+            .d      (d      ),
 	    .q      (q      )
     );
 	
@@ -18,16 +18,16 @@ module tb_shift_reg_pipo();
 	    #0.5 clk = ~clk;
 	end
 		  
-    initial begin
-	    #1; 
-        reset_n = 0; d = 0;		
+         initial begin
+	        #1; 
+                reset_n = 0; d = 0;		
 		#1.3; 
 		reset_n = 1;
 		
 		for (i=0; i<5; i=i+1) begin
-           @(posedge clk); d = $random;
+                   @(posedge clk); d = $random;
 		end	
-	end
+         end
 	
     initial begin
         #20 $finish;
