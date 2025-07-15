@@ -1,5 +1,5 @@
 module D_latch (
-        input d,
+                input d,
 		input enable,
 		input reset_n,
 		output q,
