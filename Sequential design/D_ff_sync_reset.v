@@ -1,5 +1,5 @@
 module D_ff_sync_reset (
-        input d,
+                input d,
 		input enable,
 		input clk,
 		input reset_n,
