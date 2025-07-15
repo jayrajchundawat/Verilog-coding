@@ -1,5 +1,5 @@
 `timescale 1us/1ns
-module clkgen();
+   module clkgen();
    parameter HALF_PERIOD_CLK1= 0.5;
    parameter HALF_PERIOD_CLK2= 0.25;
    
