@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module tb_shift_reg_sipo ();
 
-      reg sdi;
+          reg sdi;
 	  reg clk=0;
 	  reg reset_n;
 	  wire [3:0] q;
@@ -29,7 +29,7 @@ module tb_shift_reg_sipo ();
 		end
 	  end
 	  initial begin
-        #20 $finish;
-      end 
+            #20 $finish;
+          end 
 endmodule
 	  
