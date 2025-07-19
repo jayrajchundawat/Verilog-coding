@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 module tb_nbit_count_up_down ();
-     parameter CNT_WIDTH = 3;
+         parameter CNT_WIDTH = 3;
 	 reg clk=0;
 	 reg reset_n;
 	 reg count_up_down;
@@ -8,8 +8,8 @@ module tb_nbit_count_up_down ();
 	 
 	 nbit_count_up_down 
 	  #(.CNT_WIDTH(CNT_WIDTH))
-	  CNTUD (
-	         .clk(clk),
+	         CNTUD (
+	                 .clk(clk),
 			 .reset_n(reset_n),
 			 .count_up_down(count_up_down),
 			 .counter (counter)
