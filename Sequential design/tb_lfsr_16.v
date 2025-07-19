@@ -7,7 +7,7 @@ module tb_lfsr_16 ();
    wire [15:0] lfsr;
    
    lfsr_16  LFSR16 (
-      .clk(clk),
+          .clk(clk),
 	  .enable(enable),
 	  .reset_n(reset_n),
 	  .lfsr(lfsr)
