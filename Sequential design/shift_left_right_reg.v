@@ -1,5 +1,5 @@
 module shift_left_right_reg (
-        input load_enable,
+                input load_enable,
 		input clk,
 		input reset_n,
 		input [7:0] i,
@@ -15,11 +15,11 @@ module shift_left_right_reg (
 		  else begin
 		     if (shift_left_right == 1'b0) begin
 		        q <= {q[6:0], 1'b0};
-			 end else begin
-			    q <= {1'b0, q[6:0]};
-			 end
+		     end else begin
+		        q <= {1'b0, q[6:0]};
+		     end
 		  end
-		end
+	        end
 endmodule
 		
 		
