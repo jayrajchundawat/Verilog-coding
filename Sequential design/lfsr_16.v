@@ -1,6 +1,6 @@
 
 module lfsr_16 (
-       input clk,
+           input clk,
 	   input reset_n,
 	   input enable,
 	   output reg [15:0]lfsr
@@ -14,9 +14,9 @@ module lfsr_16 (
 	   always @ (posedge clk or negedge reset_n) begin
 	      if (!reset_n)
 		     lfsr <= RST_SEED;
-		  else if (enable == 1'b1)
+	      else if (enable == 1'b1)
 		     lfsr <= {lfsr [14:0],feedback};
-		end
+	      end
 endmodule
 		  
 	   
