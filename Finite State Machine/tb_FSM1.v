@@ -1,7 +1,7 @@
 `timescale 1us/1ns
 module tb_fsm1();
 
-    reg clk = 0;
+        reg clk = 0;
 	reg rst_n;
 	reg validate_code;
 	reg  [3:0] access_code;
@@ -9,7 +9,7 @@ module tb_fsm1();
 	wire [1:0] state_out;
 
     fsm1 FSM0(
-        .clk             (clk             ),
+                .clk             (clk             ),
 		.rst_n           (rst_n           ),
 		.validate_code   (validate_code   ),
 		.access_code     (access_code     ),
