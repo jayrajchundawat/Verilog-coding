@@ -1,5 +1,5 @@
 module FSM1 (
-       input reset_n,
+           input reset_n,
 	   input [3:0] access_code,
 	   input validate_code,
 	   output reg open_access_door,
@@ -8,17 +8,17 @@ module FSM1 (
 	   
 	   parameter [1:0] IDLE        = 2'b0,
 	                CHECK_CODE     = 2'b01,
-					ACCESS_GRANTED = 2'b10;
+			ACCESS_GRANTED = 2'b10;
 		
 		reg [1:0] state;      
-	    reg [1:0] next_state; 
+	        reg [1:0] next_state; 
 	
-	    reg [3:0] timer; 
+	        reg [3:0] timer; 
 		
 		always @(*) begin
-	    next_state = IDLE;     
+	        next_state = IDLE;     
 		open_access_door = 0;  
-	    case (state)
+	         case (state)
 		    IDLE           : begin
 			                    if (validate_code) next_state = CHECK_CODE;
 							end
