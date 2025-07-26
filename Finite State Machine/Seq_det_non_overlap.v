@@ -1,5 +1,5 @@
 module Seq_det_non_overlap (
-            input clk,
+                        input clk,
 			input reset_n,
 			input seq_in,
 			output reg detected,
@@ -8,7 +8,7 @@ module Seq_det_non_overlap (
 			
 			parameter [1:0] s1 = 2'd0,
 			                s10 = 2'd1,
-							s101= 2'd2;
+					s101= 2'd2;
 							
 			reg [1:0] state;
 			reg [1:0] next_state;
@@ -21,19 +21,19 @@ module Seq_det_non_overlap (
 				s1: begin	
 					 if (seq_in == 1) next_state = s10;
 					 else             next_state = s1;
-					end
+				    end
 				s10: begin
 				      if (seq_in == 0) next_state = s101;
-					  else             next_state = s10;
-					 end
+				      else             next_state = s10;
+				    end
 				s101: begin
 				       if (seq_in == 1) begin
 					    detected = 1'b1;
-					   end
-					   next_state = s1; // Non-overlapping → restart after detection
-					  end
-				default: next_state = s1;
-			  endcase
+				       end
+					next_state = s1; // Non-overlapping → restart after detection
+				     end
+			        default: next_state = s1;
+			   endcase
 			end
 			
 			always @(posedge clk or negedge reset_n) begin
