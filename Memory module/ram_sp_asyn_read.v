@@ -10,11 +10,11 @@ module ram_sp_async_read (
    
    always @(posedge clk) begin
      if (write_en) begin
-	   ram[address] <= data_in;
-	 end
-	end
+	ram[address] <= data_in;
+     end
+   end
 	
-	assign data_out = ram[address];
+   assign data_out = ram[address];
 endmodule
 	    
    
