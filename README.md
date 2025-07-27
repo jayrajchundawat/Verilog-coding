@@ -12,7 +12,7 @@ The repository contains a wide range of digital design topics:
   Adders, Comparators, Encoders, Decoders, Multiplexers, Demultiplexers, 7-Segment Display Controllers, ALUs
 
 - **Sequential Circuits**  
-  Flip-Flops (D, T, JK, SR), Shift Registers, Counters (Up/Down/Ring/Johnson), Clock Dividers, Linear Feedback Shift Registers (LFSRs)
+  Flip-Flops, Shift Registers, Counters (Up/Down), Clock Dividers, Linear Feedback Shift Registers (LFSRs)
 
 - **Memory Modules**  
   Single-Port SRAM and Dual-Port SRAM designs
