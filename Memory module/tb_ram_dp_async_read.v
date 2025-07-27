@@ -2,7 +2,7 @@
 module tb_ram_dp_async_read();
 
     localparam WIDTH = 8;
-	localparam DEPTH = 64;
+    localparam DEPTH = 64;
     localparam DEPTH_LOG = $clog2(DEPTH);
     
     reg clk; 
@@ -13,7 +13,7 @@ module tb_ram_dp_async_read();
     wire [WIDTH-1:0]data_rd;
     
     integer i;
-	integer num_tests = 0;  // how many tests to perform     
+    integer num_tests = 0;  // how many tests to perform     
     integer test_count = 0;
     integer success_count = 0;
     integer error_count = 0;
@@ -22,9 +22,9 @@ module tb_ram_dp_async_read();
     // Instantiate the module
     ram_dp_async_read 
         #(.WIDTH(WIDTH),
-		  .DEPTH(DEPTH)
+	  .DEPTH(DEPTH)
 		) ram_dual_port0
-        (.clk(clk), 
+                (.clk(clk), 
 		 .we_n(we_n), 
 		 .addr_wr(addr_wr), 
 		 .addr_rd(addr_rd), 
