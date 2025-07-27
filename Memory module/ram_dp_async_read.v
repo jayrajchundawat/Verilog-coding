@@ -1,8 +1,8 @@
 module ram_dp_async_read
-        #(parameter WIDTH =8,
+                #(parameter WIDTH =8,
 		  parameter DEPTH =16,
 		  parameter DEPTH_LOG = $clog2(DEPTH))
-        (input clk, 
+                (input clk, 
 		 input we_n, 
 		 input [DEPTH_LOG-1:0] addr_wr, // The address bus has a log2(DEPTH)
 		 input [DEPTH_LOG-1:0] addr_rd, 
