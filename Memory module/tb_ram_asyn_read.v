@@ -7,7 +7,7 @@ module tb_ram_sp_asyn_read();
 	reg write_en;       // active high
 	wire [7:0] data_out;// 8bit output word
 	reg [1:0] delay;
-	reg [7:0] wr_data;
+	reg [7:0] wr_data;  // temporary variable to hold data before writing
 	integer success_count, error_count, test_count;
         integer i;
 	
@@ -41,7 +41,7 @@ module tb_ram_sp_asyn_read();
 	// Compare write data with read data
 	task compare_data(input [3:0] address, input [7:0] expected_data, input [7:0] observed_data); 
 	            begin
-		            if (expected_data === observed_data) begin 
+			    if (expected_data === observed_data) begin // expected comes from testbench and observed comes from DUT
 				$display($time, " SUCCESS address = %0d, expected_data = %2x, observed_data = %2x", 
 				                  address, expected_data, observed_data);
                                success_count = success_count + 1;				
@@ -65,7 +65,7 @@ module tb_ram_sp_asyn_read();
 		#1.3; 
 		for (i=0; i<17; i=i+1) begin
 		        wr_data = $random;
-		        write_data(i, wr_data); // write random data at an address
+			write_data(i, wr_data); // write random data at an address, // address_in = i, d_in = wr_data
 			read_data(i);           // read that address back
 			#0.1;                   // wait for output to stabilize 
 			compare_data(i, wr_data, data_out);
